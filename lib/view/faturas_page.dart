@@ -167,7 +167,7 @@ class _FaturasPageState extends State<FaturasPage> {
                           },
                           onSaved: (newValue) {
                             if (newValue != null) {
-                              //clientesModel.nome = newValue;
+                              faturasModel.descricao = newValue;
                             }
                           },
                         ),

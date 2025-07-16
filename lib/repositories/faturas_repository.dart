@@ -49,14 +49,11 @@ class FaturasRepository {
     try {
       final endPoint = "/api/faturas";
       dynamic response;
-
+      String data = jsonEncode(faturasModel.toJson());
       if (faturasModel.id != null) {
-        response = await service.dio.put(endPoint, data: faturasModel.toJson());
+        response = await service.dio.put(endPoint, data: data);
       } else {
-        response = await service.dio.post(
-          endPoint,
-          data: faturasModel.toJson(),
-        );
+        response = await service.dio.post(endPoint, data: data);
       }
 
       if (response.data['success'] == true) {
