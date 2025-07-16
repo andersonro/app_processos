@@ -314,7 +314,7 @@ class _FaturasPageState extends State<FaturasPage> {
                                   CentavosInputFormatter(casasDecimais: 2),
                                 ],
                                 validator: (value) {
-                                  if (value == null || value.isEmpty) {
+                                  if (value == null || value.trim().isEmpty) {
                                     return 'O campo valor é obrigatório!';
                                   }
                                   return null;
